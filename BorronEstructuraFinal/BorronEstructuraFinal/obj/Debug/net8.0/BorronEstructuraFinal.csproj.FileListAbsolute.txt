@@ -1,0 +1,14 @@
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\bin\Debug\net8.0\BorronEstructuraFinal.exe
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\bin\Debug\net8.0\BorronEstructuraFinal.deps.json
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\bin\Debug\net8.0\BorronEstructuraFinal.runtimeconfig.json
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\bin\Debug\net8.0\BorronEstructuraFinal.dll
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\bin\Debug\net8.0\BorronEstructuraFinal.pdb
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\obj\Debug\net8.0\BorronEstructuraFinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\obj\Debug\net8.0\BorronEstructuraFinal.AssemblyInfoInputs.cache
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\obj\Debug\net8.0\BorronEstructuraFinal.AssemblyInfo.cs
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\obj\Debug\net8.0\BorronEstructuraFinal.csproj.CoreCompileInputs.cache
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\obj\Debug\net8.0\BorronEstructuraFinal.dll
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\obj\Debug\net8.0\refint\BorronEstructuraFinal.dll
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\obj\Debug\net8.0\BorronEstructuraFinal.pdb
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\obj\Debug\net8.0\BorronEstructuraFinal.genruntimeconfig.cache
+C:\Users\juanp\OneDrive\Escritorio\Estructura de datos\BorronEstructuraFinal\BorronEstructuraFinal\obj\Debug\net8.0\ref\BorronEstructuraFinal.dll
