@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\obj\Debug\net8.0\RedArbolAmigos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\obj\Debug\net8.0\RedArbolAmigos.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\obj\Debug\net8.0\RedArbolAmigos.AssemblyInfo.cs
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\obj\Debug\net8.0\RedArbolAmigos.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\bin\Debug\net8.0\RedArbolAmigos.exe
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\bin\Debug\net8.0\RedArbolAmigos.deps.json
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\bin\Debug\net8.0\RedArbolAmigos.runtimeconfig.json
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\bin\Debug\net8.0\RedArbolAmigos.dll
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\bin\Debug\net8.0\RedArbolAmigos.pdb
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\obj\Debug\net8.0\RedArbolAmigos.dll
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\obj\Debug\net8.0\refint\RedArbolAmigos.dll
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\obj\Debug\net8.0\RedArbolAmigos.pdb
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\obj\Debug\net8.0\RedArbolAmigos.genruntimeconfig.cache
+C:\Users\User\Desktop\RedArbolAmigos\RedArbolAmigos\obj\Debug\net8.0\ref\RedArbolAmigos.dll

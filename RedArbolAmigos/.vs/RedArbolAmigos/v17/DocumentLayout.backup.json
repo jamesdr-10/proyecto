@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|c:\\users\\user\\desktop\\redarbolamigos\\redarbolamigos\\nodosolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|solutionrelative:redarbolamigos\\nodosolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|c:\\users\\user\\desktop\\redarbolamigos\\redarbolamigos\\listacirculardoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|solutionrelative:redarbolamigos\\listacirculardoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|c:\\users\\user\\desktop\\redarbolamigos\\redarbolamigos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|solutionrelative:redarbolamigos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|c:\\users\\user\\desktop\\redarbolamigos\\redarbolamigos\\colasolicitudamistad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|solutionrelative:redarbolamigos\\colasolicitudamistad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|c:\\users\\user\\desktop\\redarbolamigos\\redarbolamigos\\tablahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|solutionrelative:redarbolamigos\\tablahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|c:\\users\\user\\desktop\\redarbolamigos\\redarbolamigos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE5F13AA-87AD-47D2-A6A5-50241BCB2E85}|RedArbolAmigos\\RedArbolAmigos.csproj|solutionrelative:redarbolamigos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NodoSolicitud.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\NodoSolicitud.cs",
+              "RelativeDocumentMoniker": "RedArbolAmigos\\NodoSolicitud.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\NodoSolicitud.cs",
+              "RelativeToolTip": "RedArbolAmigos\\NodoSolicitud.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T21:49:50.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListaCircularDoble.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\ListaCircularDoble.cs",
+              "RelativeDocumentMoniker": "RedArbolAmigos\\ListaCircularDoble.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\ListaCircularDoble.cs",
+              "RelativeToolTip": "RedArbolAmigos\\ListaCircularDoble.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAuwI0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T01:48:37.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\Program.cs",
+              "RelativeDocumentMoniker": "RedArbolAmigos\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\Program.cs",
+              "RelativeToolTip": "RedArbolAmigos\\Program.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAwGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T01:38:56.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ColaSolicitudAmistad.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\ColaSolicitudAmistad.cs",
+              "RelativeDocumentMoniker": "RedArbolAmigos\\ColaSolicitudAmistad.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\ColaSolicitudAmistad.cs",
+              "RelativeToolTip": "RedArbolAmigos\\ColaSolicitudAmistad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T22:34:42.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TablaHash.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\TablaHash.cs",
+              "RelativeDocumentMoniker": "RedArbolAmigos\\TablaHash.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\TablaHash.cs",
+              "RelativeToolTip": "RedArbolAmigos\\TablaHash.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAuwJYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T02:59:43.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\Usuario.cs",
+              "RelativeDocumentMoniker": "RedArbolAmigos\\Usuario.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RedArbolAmigos\\RedArbolAmigos\\Usuario.cs",
+              "RelativeToolTip": "RedArbolAmigos\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T01:40:34.788Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
