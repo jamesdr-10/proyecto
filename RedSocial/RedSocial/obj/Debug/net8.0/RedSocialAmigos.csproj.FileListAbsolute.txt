@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\RedSocial\RedSocial\bin\Debug\net8.0\RedSocialAmigos.exe
+C:\Users\User\Desktop\RedSocial\RedSocial\bin\Debug\net8.0\RedSocialAmigos.deps.json
+C:\Users\User\Desktop\RedSocial\RedSocial\bin\Debug\net8.0\RedSocialAmigos.runtimeconfig.json
+C:\Users\User\Desktop\RedSocial\RedSocial\bin\Debug\net8.0\RedSocialAmigos.dll
+C:\Users\User\Desktop\RedSocial\RedSocial\bin\Debug\net8.0\RedSocialAmigos.pdb
+C:\Users\User\Desktop\RedSocial\RedSocial\obj\Debug\net8.0\RedSocialAmigos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\RedSocial\RedSocial\obj\Debug\net8.0\RedSocialAmigos.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\RedSocial\RedSocial\obj\Debug\net8.0\RedSocialAmigos.AssemblyInfo.cs
+C:\Users\User\Desktop\RedSocial\RedSocial\obj\Debug\net8.0\RedSocialAmigos.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\RedSocial\RedSocial\obj\Debug\net8.0\RedSocialAmigos.dll
+C:\Users\User\Desktop\RedSocial\RedSocial\obj\Debug\net8.0\refint\RedSocialAmigos.dll
+C:\Users\User\Desktop\RedSocial\RedSocial\obj\Debug\net8.0\RedSocialAmigos.pdb
+C:\Users\User\Desktop\RedSocial\RedSocial\obj\Debug\net8.0\RedSocialAmigos.genruntimeconfig.cache
+C:\Users\User\Desktop\RedSocial\RedSocial\obj\Debug\net8.0\ref\RedSocialAmigos.dll
