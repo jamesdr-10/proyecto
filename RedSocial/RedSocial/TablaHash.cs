@@ -110,12 +110,10 @@ namespace RedSocialAmigos
             }
             return null;
         }
-
         public double ObtenerFactorCarga()
         {
             return (double)numElementos / tamañoTabla;
         }
-
     }
 }
 

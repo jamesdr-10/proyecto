@@ -5,7 +5,11 @@ class Program
     static RedDeUsuarios redDeUsuarios = new RedDeUsuarios();
     public static void Menu()
     {
-        Console.Clear();
+
+        Console.WriteLine("=====================================");
+        Console.WriteLine("            USUARIO ACTUAL          ");
+        Console.WriteLine("=====================================\n");
+
         redDeUsuarios.PersonaActual();
 
         Console.WriteLine("\n=====================================");
@@ -36,6 +40,7 @@ class Program
 
         while (continuar)
         {
+            Console.Clear();
             Menu();
             string opcion = Console.ReadLine();
 
@@ -47,23 +52,23 @@ class Program
                     break;
                 case "2":
                     Console.Clear();
-                    //redDeUsuarios.AgregarAmigo();
+                    redDeUsuarios.AgregarAmigo();
                     break;
                 case "3":
                     Console.Clear();
-                    //redDeUsuarios.MostrarAmigosAceptados();
+                    redDeUsuarios.MostrarListaDeAmigos();
                     break;
                 case "4":
                     Console.Clear();
-                    //redDeUsuarios.MostrarAmigosRecíprocos();
+                    redDeUsuarios.MostrarAmigosReciprocos();
                     break;
                 case "5":
                     Console.Clear();
-                    //redDeUsuarios.MostrarAmigosNoRecíprocos();
+                    redDeUsuarios.MostrarAmigosNoReciprocos();
                     break;
                 case "6":
                     Console.Clear();
-                    //redDeUsuarios.ProcesarSolicitudesAmistad();
+                    redDeUsuarios.ProcesarSolicitudesAmistad();
                     break;
                 case "7":
                     Console.Clear();
@@ -90,10 +95,12 @@ class Program
                     redDeUsuarios.PersonaAnterior();
                     break;
                 case "0":
+                    Console.Clear();
                     Console.WriteLine("Saliendo del programa...");
                     continuar = false;
                     break;
                 default:
+                    Console.Clear();
                     Console.WriteLine("Opción no válida. Intente nuevamente.");
                     break;
             }

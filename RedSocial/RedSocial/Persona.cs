@@ -15,8 +15,8 @@ namespace RedSocialAmigos
         public string Email;
         public Persona Siguiente;
         public Persona Anterior;
-        //public ListaAmigos ListaDeAmigos;
-        //public ColaSolicitudes SolicitudesAmistad;
+        public ListaAmigos ListaDeAmigos;
+        public ColaSolicitud SolicitudesAmistad;
         public int TotalAmigos;
 
         public Persona(string nombre, string apellido, int edad, string telefono, string email)
@@ -28,19 +28,14 @@ namespace RedSocialAmigos
             Email = email;
             Siguiente = null;
             Anterior = null;
-            //ListaDeAmigos = new ListaAmigos();
-            //SolicitudesAmistad = new ColaSolicitudes();
+            ListaDeAmigos = null;
+            SolicitudesAmistad = null;
             TotalAmigos = 0;
         }
 
-         public void MostrarDatos()
+        public void MostrarDatos()
         {
-            Console.WriteLine($"Nombre: {Nombre}");
-            Console.WriteLine($"Apellido: {Apellido}");
-            Console.WriteLine($"Edad: {Edad}");
-            Console.WriteLine($"Teléfono: {Telefono}");
-            Console.WriteLine($"Email: {Email}");
-            Console.WriteLine($"Total de amigos: {TotalAmigos}");
+            Console.WriteLine($"Nombre: {Nombre}, Apellido: {Apellido}, Edad: {Edad}, Email: {Email}, Total de amigos: {TotalAmigos}");
         }
     }
 }
