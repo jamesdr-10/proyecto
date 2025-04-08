@@ -1,10 +1,12 @@
-﻿using System;
+﻿using RedSocialAmigos.EstructuraDeDatos.Colas;
+using RedSocialAmigos.EstructuraDeDatos.Listas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedSocialAmigos
+namespace RedSocialAmigos.Entidad
 {
     class Persona
     {

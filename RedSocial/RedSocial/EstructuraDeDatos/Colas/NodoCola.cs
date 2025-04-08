@@ -1,10 +1,11 @@
-﻿using System;
+﻿using RedSocialAmigos.EstructuraDeDatos.Arbol;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedSocialAmigos
+namespace RedSocialAmigos.EstructuraDeDatos.Colas
 {
     class NodoCola
     {

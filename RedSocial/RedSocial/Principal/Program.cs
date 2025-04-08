@@ -1,4 +1,4 @@
-﻿using RedSocialAmigos;
+﻿using RedSocialAmigos.Main;
 
 class Program
 {

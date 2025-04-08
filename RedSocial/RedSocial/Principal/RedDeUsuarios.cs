@@ -1,4 +1,9 @@
-﻿using System;
+﻿using RedSocialAmigos.Entidad;
+using RedSocialAmigos.EstructuraDeDatos.Arbol;
+using RedSocialAmigos.EstructuraDeDatos.Colas;
+using RedSocialAmigos.EstructuraDeDatos.Listas;
+using RedSocialAmigos.EstructuraDeDatos.TablasHash;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
@@ -6,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace RedSocialAmigos
+namespace RedSocialAmigos.Main
 {
     class RedDeUsuarios
     {
