@@ -17,6 +17,5 @@ namespace RedSocialAmigos
             Amigo = amigo;
             Siguiente = null;
         }
-
     }
 }

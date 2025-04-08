@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,46 +24,81 @@ namespace RedSocialAmigos
         public void AgregarUsuario()
         {
             Console.Write("Digite el nombre de la persona: ");
-            string nombre = Console.ReadLine();
+            string nombre = Console.ReadLine().Trim();
+            while (string.IsNullOrWhiteSpace(nombre) || !nombre.Replace(" ", "").All(char.IsLetter))
+            {
+                Console.WriteLine("Error: El nombre solo puede contener letras y no puede estar vacío.");
+                Console.Write("Digite el nombre de la persona: ");
+                nombre = Console.ReadLine().Trim();
+            }
+            nombre = string.Join(" ", nombre.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
+
             Console.Write("Digite el apellido del usuario: ");
-            string apellido = Console.ReadLine();
+            string apellido = Console.ReadLine().Trim();
+            while (string.IsNullOrWhiteSpace(apellido) || !apellido.Replace(" ", "").All(char.IsLetter))
+            {
+                Console.WriteLine("Error: El apellido solo puede contener letras y no puede estar vacío.");
+                Console.Write("Digite el apellido del usuario: ");
+                apellido = Console.ReadLine().Trim();
+            }
+            apellido = string.Join(" ", apellido.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
+
             int edad;
-            while (true)
+            do
             {
                 Console.Write("Digite la edad de la persona: ");
-                try
+                if (int.TryParse(Console.ReadLine(), out edad) && edad > 0)
                 {
-                    edad = Convert.ToInt32(Console.ReadLine());
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Entrada inválida. Por favor ingresa una edad válida mayor que 0.");
+                }
+            } while (true);
 
-                    if (edad > 0)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Por favor, ingresa una edad mayor que 0.");
-                    }
-                }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Entrada inválida. Por favor ingresa un número válido.");
-                }
-            }
             Console.Write("Digite el teléfono de la persona: ");
-            string telefono = Console.ReadLine();
-            Console.Write("Digite el email de la persona: ");
-            string email = Console.ReadLine();
-
-            if (BuscarPorEmail(email) != null)
+            string telefono = Console.ReadLine().Trim();
+            while (string.IsNullOrWhiteSpace(telefono) || !telefono.All(char.IsDigit))
             {
-                Console.WriteLine("Error: Ya existe una persona con este email.");
-                return;
+                Console.WriteLine("Error: El teléfono solo puede contener números y no puede estar vacío.");
+                Console.Write("Digite el teléfono de la persona: ");
+                telefono = Console.ReadLine().Trim();
             }
 
-            if (tablaDirectorio.Buscar(telefono) != null)
+            while (tablaDirectorio.Buscar(telefono) != null)
             {
                 Console.WriteLine("Error: Ya existe una persona con este número de teléfono.");
-                return;
+                Console.Write("Por favor, ingrese un teléfono diferente: ");
+                telefono = Console.ReadLine().Trim();
+                while (string.IsNullOrWhiteSpace(telefono) || !telefono.All(char.IsDigit))
+                {
+                    Console.WriteLine("Error: El teléfono solo puede contener números y no puede estar vacío.");
+                    Console.Write("Digite el teléfono de la persona: ");
+                    telefono = Console.ReadLine().Trim();
+                }
+            }
+
+            Console.Write("Digite el email de la persona: ");
+            string email = Console.ReadLine().Trim();
+            while (string.IsNullOrWhiteSpace(email) || !email.Contains("@") || email.Contains(" "))
+            {
+                Console.WriteLine("Error: Ingrese un email válido sin espacios.");
+                Console.Write("Digite el email de la persona: ");
+                email = Console.ReadLine().Trim();
+            }
+
+            while (BuscarPorEmail(email) != null)
+            {
+                Console.WriteLine("Error: Ya existe una persona con este email.");
+                Console.Write("Por favor, ingrese un email diferente: ");
+                email = Console.ReadLine().Trim();
+                while (string.IsNullOrWhiteSpace(email) || !email.Contains("@") || email.Contains(" "))
+                {
+                    Console.WriteLine("Error: Ingrese un email válido sin espacios.");
+                    Console.Write("Digite el email de la persona: ");
+                    email = Console.ReadLine().Trim();
+                }
             }
 
             Persona nuevaPersona = new Persona(nombre, apellido, edad, telefono, email);
@@ -166,7 +202,7 @@ namespace RedSocialAmigos
 
             while (solicitud != null)
             {
-                Console.WriteLine($"Tienes una solicitud de: {solicitud.Solicitante.Nombre} ({solicitud.Solicitante.Email})");
+                Console.WriteLine($"Tienes una solicitud de: {solicitud.Solicitante.Nombre} {solicitud.Solicitante.Apellido} ({solicitud.Solicitante.Email})");
 
                 string opcion;
                 do
@@ -220,18 +256,18 @@ namespace RedSocialAmigos
 
             if (actual.ListaDeAmigos == null)
             {
-                Console.WriteLine($"{actual.Nombre} no tiene amigos agregados todavía.");
+                Console.WriteLine($"{actual.Nombre} {actual.Apellido} no tiene amigos agregados todavía.");
                 return;
             }
 
-            Console.WriteLine($"Lista de amigos de {actual.Nombre}:");
+            Console.WriteLine($"Lista de amigos de {actual.Nombre} {actual.Apellido}:");
 
             ListaAmigos amigoActual = actual.ListaDeAmigos;
             int contador = 1;
 
             while (amigoActual != null)
             {
-                Console.WriteLine($"{contador}. {amigoActual.Amigo.Nombre} ({amigoActual.Amigo.Email})");
+                Console.WriteLine($"{contador}. {amigoActual.Amigo.Nombre} {amigoActual.Amigo.Apellido} ({amigoActual.Amigo.Email})");
                 amigoActual = amigoActual.Siguiente;
                 contador++;
             }
@@ -245,7 +281,7 @@ namespace RedSocialAmigos
                 return;
             }
 
-            Console.WriteLine($"Amigos mutuos de {actual.Nombre}:");
+            Console.WriteLine($"Amigos mutuos de {actual.Nombre} {actual.Apellido}:");
 
             ListaAmigos amigoActual = actual.ListaDeAmigos;
             bool hayMutuos = false;
@@ -257,7 +293,7 @@ namespace RedSocialAmigos
                 {
                     if (listaDelOtro.Amigo == actual)
                     {
-                        Console.WriteLine($"- {amigoActual.Amigo.Nombre} ({amigoActual.Amigo.Email})");
+                        Console.WriteLine($"- {amigoActual.Amigo.Nombre} {amigoActual.Amigo.Apellido} ({amigoActual.Amigo.Email})");
                         hayMutuos = true;
                         break;
                     }
@@ -283,7 +319,7 @@ namespace RedSocialAmigos
             Persona temp = cabeza;
             bool hayNoReciprocados = false;
 
-            Console.WriteLine($"Personas que tienen a {actual.Nombre} como amigo, pero tú no los has agregado:");
+            Console.WriteLine($"Personas que tienen a {actual.Nombre} {actual.Apellido} como amigo, pero tú no los has agregado:");
 
             do
             {
@@ -294,7 +330,7 @@ namespace RedSocialAmigos
                     {
                         if (listaTemp.Amigo == actual && !YaSonAmigos(actual, temp))
                         {
-                            Console.WriteLine($"- {temp.Nombre} ({temp.Email})");
+                            Console.WriteLine($"- {temp.Nombre} {temp.Apellido} ({temp.Email})");
                             hayNoReciprocados = true;
                             break;
                         }
@@ -500,10 +536,5 @@ namespace RedSocialAmigos
 
 
         //}
-
-
-
-
-
     }
 }

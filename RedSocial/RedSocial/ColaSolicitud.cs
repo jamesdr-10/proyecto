@@ -16,6 +16,5 @@ namespace RedSocialAmigos
             Solicitante = solicitante;
             Siguiente = null;
         }
-
     }
 }
