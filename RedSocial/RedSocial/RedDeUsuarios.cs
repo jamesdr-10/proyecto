@@ -347,6 +347,59 @@ namespace RedSocialAmigos
             }
         }
 
+        public void ArmarArbol()
+        {
+            if (actual == null)
+            {
+                Console.WriteLine("No hay persona actual seleccionada.");
+                return;
+            }
+
+            NodoArbol raiz = new NodoArbol(actual);
+            TablaHash hashEmails = new TablaHash(10);
+            hashEmails.Insertar(actual.Email);
+
+            ColaNodoArbol cola = new ColaNodoArbol();
+            cola.Encolar(raiz);
+
+            while (!cola.EstaVacia())
+            {
+                NodoArbol nodoActual = cola.Desencolar();
+                ListaAmigos listaAmigos = nodoActual.Persona.ListaDeAmigos;
+
+                while (listaAmigos != null)
+                {
+                    Persona amigo = listaAmigos.Amigo;
+                    if (!hashEmails.C(amigo.Email))
+                    {
+                        hashEmails.Insertar(amigo.Email);
+                        TreeNode nuevoHijo = new TreeNode(amigo);
+                        nodoActual.AgregarHijo(nuevoHijo);
+                        cola.Enqueue(nuevoHijo);
+                    }
+                    listaAmigos = listaAmigos.Siguiente;
+                }
+            }
+
+            Console.WriteLine($"Árbol con raíz en {actual.Nombre} {actual.Apellido}:");
+            ImprimirArbolComoLista(raiz, 0);
+        }
+
+        private void ImprimirArbolComoLista(TreeNode nodo, int nivel)
+        {
+            if (nodo == null) return;
+
+            string indentacion = new string(' ', nivel * 4);
+            Console.WriteLine($"{indentacion}- {nodo.Persona.Nombre} {nodo.Persona.Apellido} ({nodo.Persona.Email})");
+
+            TreeNode hijoActual = nodo.PrimerHijo;
+            while (hijoActual != null)
+            {
+                ImprimirArbolComoLista(hijoActual, nivel + 1);
+                hijoActual = hijoActual.SiguienteHijo;
+            }
+        }
+
         public bool YaSonAmigos(Persona p1, Persona p2)
         {
             ListaAmigos lista = p1.ListaDeAmigos;

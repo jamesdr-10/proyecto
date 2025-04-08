@@ -27,12 +27,16 @@
       "RelativeMoniker": "D:0:0:{D85B57A8-AB05-4344-8D6C-75A4EAC23F5C}|RedSocial\\RedSocialAmigos.csproj|solutionrelative:redsocial\\tablahash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D85B57A8-AB05-4344-8D6C-75A4EAC23F5C}|RedSocial\\RedSocialAmigos.csproj|c:\\users\\user\\desktop\\proyecto de estructura\\proyecto\\redsocial\\redsocial\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D85B57A8-AB05-4344-8D6C-75A4EAC23F5C}|RedSocial\\RedSocialAmigos.csproj|solutionrelative:redsocial\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D85B57A8-AB05-4344-8D6C-75A4EAC23F5C}|RedSocial\\RedSocialAmigos.csproj|c:\\users\\user\\desktop\\proyecto de estructura\\proyecto\\redsocial\\redsocial\\reddeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D85B57A8-AB05-4344-8D6C-75A4EAC23F5C}|RedSocial\\RedSocialAmigos.csproj|solutionrelative:redsocial\\reddeusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D85B57A8-AB05-4344-8D6C-75A4EAC23F5C}|RedSocial\\RedSocialAmigos.csproj|c:\\users\\user\\desktop\\proyecto de estructura\\proyecto\\redsocial\\redsocial\\colanodoarbol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D85B57A8-AB05-4344-8D6C-75A4EAC23F5C}|RedSocial\\RedSocialAmigos.csproj|solutionrelative:redsocial\\colanodoarbol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D85B57A8-AB05-4344-8D6C-75A4EAC23F5C}|RedSocial\\RedSocialAmigos.csproj|c:\\users\\user\\desktop\\proyecto de estructura\\proyecto\\redsocial\\redsocial\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D85B57A8-AB05-4344-8D6C-75A4EAC23F5C}|RedSocial\\RedSocialAmigos.csproj|solutionrelative:redsocial\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ColaNodoArbol.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto de Estructura\\proyecto\\RedSocial\\RedSocial\\ColaNodoArbol.cs",
+              "RelativeDocumentMoniker": "RedSocial\\ColaNodoArbol.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto de Estructura\\proyecto\\RedSocial\\RedSocial\\ColaNodoArbol.cs",
+              "RelativeToolTip": "RedSocial\\ColaNodoArbol.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wEMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T04:23:03.54Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,7 +73,7 @@
               "RelativeDocumentMoniker": "RedSocial\\NodoArbol.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto de Estructura\\proyecto\\RedSocial\\RedSocial\\NodoArbol.cs",
               "RelativeToolTip": "RedSocial\\NodoArbol.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T03:18:20.633Z",
               "EditorCaption": ""
@@ -82,7 +99,7 @@
               "RelativeDocumentMoniker": "RedSocial\\Persona.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto de Estructura\\proyecto\\RedSocial\\RedSocial\\Persona.cs",
               "RelativeToolTip": "RedSocial\\Persona.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T00:31:46.656Z",
               "EditorCaption": ""
@@ -121,27 +138,27 @@
               "RelativeDocumentMoniker": "RedSocial\\TablaHash.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto de Estructura\\proyecto\\RedSocial\\RedSocial\\TablaHash.cs",
               "RelativeToolTip": "RedSocial\\TablaHash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAowHUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T02:06:23.953Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "RedDeUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto de Estructura\\proyecto\\RedSocial\\RedSocial\\RedDeUsuarios.cs",
               "RelativeDocumentMoniker": "RedSocial\\RedDeUsuarios.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Proyecto de Estructura\\proyecto\\RedSocial\\RedSocial\\RedDeUsuarios.cs",
               "RelativeToolTip": "RedSocial\\RedDeUsuarios.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAANYBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIYBAAAAAAAAAAAIwHQBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T00:44:18.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Proyecto de Estructura\\proyecto\\RedSocial\\RedSocial\\Program.cs",
               "RelativeDocumentMoniker": "RedSocial\\Program.cs",
@@ -149,8 +166,7 @@
               "RelativeToolTip": "RedSocial\\Program.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAAAswHIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T00:31:34.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T00:31:34.294Z"
             }
           ]
         }
