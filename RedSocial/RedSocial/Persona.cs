@@ -35,7 +35,7 @@ namespace RedSocialAmigos
 
         public void MostrarDatos()
         {
-            Console.WriteLine($"Nombre: {Nombre}, Apellido: {Apellido}, Edad: {Edad}, Email: {Email}, Total de amigos: {TotalAmigos}");
+            Console.WriteLine($"Nombre: {Nombre}, Apellido: {Apellido}, Edad: {Edad}, Email: {Email}, Telefono: {Telefono}, Total de amigos: {TotalAmigos}");
         }
     }
 }

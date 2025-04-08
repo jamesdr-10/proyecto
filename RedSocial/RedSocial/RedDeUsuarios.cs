@@ -126,7 +126,7 @@ namespace RedSocialAmigos
         {
             if (actual == null)
             {
-                Console.WriteLine("No se han agregado personas todavía.");
+                Console.WriteLine("No se han registrado personas todavía.");
                 return;
             }
 
@@ -186,7 +186,7 @@ namespace RedSocialAmigos
         {
             if (actual == null)
             {
-                Console.WriteLine("No se han agregado personas todavía.");
+                Console.WriteLine("No se han registrado personas todavía.");
                 return;
             }
 
@@ -195,7 +195,7 @@ namespace RedSocialAmigos
 
             if (solicitud == null)
             {
-                Console.WriteLine("Esta persona no tiene solicitudes pendientes");
+                Console.WriteLine("No tienes solicitudes pendientes");
                 return;
             }
 
@@ -250,13 +250,13 @@ namespace RedSocialAmigos
         {
             if (actual == null)
             {
-                Console.WriteLine("No se han agregado personas todavía.");
+                Console.WriteLine("No se han registrado personas todavía.");
                 return;
             }
 
             if (actual.ListaDeAmigos == null)
             {
-                Console.WriteLine($"{actual.Nombre} {actual.Apellido} no tiene amigos agregados todavía.");
+                Console.WriteLine($"No tienes amigos agregados todavía.");
                 return;
             }
 
@@ -312,14 +312,14 @@ namespace RedSocialAmigos
         {
             if (actual == null)
             {
-                Console.WriteLine("No hay personas registradas.");
+                Console.WriteLine("No se han registrado personas todavía.");
                 return;
             }
 
             Persona temp = cabeza;
             bool hayNoReciprocados = false;
 
-            Console.WriteLine($"Personas que tienen a {actual.Nombre} {actual.Apellido} como amigo, pero tú no los has agregado:");
+            Console.WriteLine($"Personas que te tienen como amigo, pero tú no los has agregado:");
 
             do
             {
@@ -351,53 +351,78 @@ namespace RedSocialAmigos
         {
             if (actual == null)
             {
-                Console.WriteLine("No hay persona actual seleccionada.");
+                Console.WriteLine("No se han registrado personas todavía.");
                 return;
             }
 
             NodoArbol raiz = new NodoArbol(actual);
-            TablaHash hashEmails = new TablaHash(10);
-            hashEmails.Insertar(actual.Email);
+            TablaHashEmail visitados = new TablaHashEmail();
+            visitados.Insertar(actual.Email);
 
-            ColaNodoArbol cola = new ColaNodoArbol();
-            cola.Encolar(raiz);
+            NodoCola frente = new NodoCola(raiz);
+            NodoCola final = frente;
 
-            while (!cola.EstaVacia())
+            while (frente != null)
             {
-                NodoArbol nodoActual = cola.Desencolar();
-                ListaAmigos listaAmigos = nodoActual.Persona.ListaDeAmigos;
+                NodoArbol nodoActual = frente.NodoArbol;
+                frente = frente.Siguiente;
 
-                while (listaAmigos != null)
+                ListaAmigos amigo = nodoActual.Persona.ListaDeAmigos;
+                while (amigo != null)
                 {
-                    Persona amigo = listaAmigos.Amigo;
-                    if (!hashEmails.C(amigo.Email))
+                    Persona amigoPersona = amigo.Amigo;
+                    if (!visitados.Contiene(amigoPersona.Email))
                     {
-                        hashEmails.Insertar(amigo.Email);
-                        TreeNode nuevoHijo = new TreeNode(amigo);
-                        nodoActual.AgregarHijo(nuevoHijo);
-                        cola.Enqueue(nuevoHijo);
+                        visitados.Insertar(amigoPersona.Email);
+                        NodoArbol nuevoHijo = new NodoArbol(amigoPersona);
+
+                        if (nodoActual.PrimerHijo == null)
+                            nodoActual.PrimerHijo = nuevoHijo;
+                        else
+                        {
+                            NodoArbol temp = nodoActual.PrimerHijo;
+                            while (temp.SiguienteHijo != null)
+                                temp = temp.SiguienteHijo;
+                            temp.SiguienteHijo = nuevoHijo;
+                        }
+
+                        if (frente == null)
+                            frente = final = new NodoCola(nuevoHijo);
+                        else
+                        {
+                            final.Siguiente = new NodoCola(nuevoHijo);
+                            final = final.Siguiente;
+                        }
                     }
-                    listaAmigos = listaAmigos.Siguiente;
+                    amigo = amigo.Siguiente;
                 }
             }
 
-            Console.WriteLine($"Árbol con raíz en {actual.Nombre} {actual.Apellido}:");
-            ImprimirArbolComoLista(raiz, 0);
+            Console.WriteLine($"Árbol como representación en forma de lista:");
+            Console.WriteLine(ObtenerRepresentacionLista(raiz));
+
         }
 
-        private void ImprimirArbolComoLista(TreeNode nodo, int nivel)
+        private string ObtenerRepresentacionLista(NodoArbol nodo)
         {
-            if (nodo == null) return;
+            if (nodo == null) return "";
 
-            string indentacion = new string(' ', nivel * 4);
-            Console.WriteLine($"{indentacion}- {nodo.Persona.Nombre} {nodo.Persona.Apellido} ({nodo.Persona.Email})");
+            string resultado = $"{nodo.Persona.Nombre} {nodo.Persona.Apellido}";
 
-            TreeNode hijoActual = nodo.PrimerHijo;
-            while (hijoActual != null)
+            if (nodo.PrimerHijo != null)
             {
-                ImprimirArbolComoLista(hijoActual, nivel + 1);
-                hijoActual = hijoActual.SiguienteHijo;
+                resultado += "(";
+                NodoArbol hijo = nodo.PrimerHijo;
+                while (hijo != null)
+                {
+                    resultado += ObtenerRepresentacionLista(hijo);
+                    if (hijo.SiguienteHijo != null) resultado += ", ";
+                    hijo = hijo.SiguienteHijo;
+                }
+                resultado += ")";
             }
+
+            return resultado;
         }
 
         public bool YaSonAmigos(Persona p1, Persona p2)
@@ -448,7 +473,7 @@ namespace RedSocialAmigos
             Persona actual = cabeza;
             if (actual == null)
             {
-                Console.WriteLine("No se han agregado personas todavía.");
+                Console.WriteLine("No se han registrado personas todavía.");
                 return;
             }
             else
@@ -470,7 +495,7 @@ namespace RedSocialAmigos
             Persona actual = cola;
             if (actual == null)
             {
-                Console.WriteLine("No se han agregado personas todavía.");
+                Console.WriteLine("No se han registrado personas todavía.");
                 return;
             }
             else
@@ -491,7 +516,7 @@ namespace RedSocialAmigos
         {
             if (actual == null)
             {
-                Console.WriteLine("No hay personas registradas.");
+                Console.WriteLine("No se han registrado personas todavía.");
             }
             else
             {
@@ -503,7 +528,7 @@ namespace RedSocialAmigos
         {
             if (actual == null)
             {
-                Console.WriteLine("No se ha agregado una persona todavía.");
+                Console.WriteLine("No se han registrado personas todavía.");
                 return;
             }
             actual = actual.Siguiente;
@@ -513,81 +538,10 @@ namespace RedSocialAmigos
         {
             if (actual == null)
             {
-                Console.WriteLine("No se ha agregado una persona todavía.");
+                Console.WriteLine("No se han registrado personas todavía.");
                 return;
             }
             actual = actual.Anterior;
         }
-
-
-
-
-        //public class ArbolPersona
-        //{
-        //    private Persona usuarioRaiz;
-
-        //    public ArbolPersona(Persona usuario)
-        //    {
-        //        usuarioRaiz = usuario;
-        //    }
-
-        //    public void ImprimirArbol()
-        //    {
-        //        if (usuarioRaiz == null)
-        //        {
-        //            Console.WriteLine("No hay usuario seleccionado.");
-        //            return;
-        //        }
-
-        //        Console.WriteLine($"Árbol de relaciones de {usuarioRaiz.Nombre}:");
-        //        Console.WriteLine($"\nNivel 0 (Tú): {usuarioRaiz.Nombre}");
-
-        //        ImprimirNivel1();
-        //        ImprimirNivel2();
-        //    }
-
-        //    private void ImprimirNivel1()
-        //    {
-        //        Console.WriteLine("\nNivel 1 (Amigos directos):");
-        //        Amigos amigo = usuarioRaiz.Amigos.Primero;
-        //        bool tieneAmigos = false;
-
-        //        while (amigo != null)
-        //        {
-        //            Console.WriteLine($"- {amigo.Amigo.Nombre}");
-        //            amigo = amigo.siguiente;
-        //            tieneAmigos = true;
-        //        }
-
-        //        if (!tieneAmigos) Console.WriteLine("No tienes amigos aún.");
-        //    }
-
-        //    private void ImprimirNivel2()
-        //    {
-        //        Console.WriteLine("\nNivel 2 (Amigos de amigos - Sugerencias):");
-        //        Amigos amigo = usuarioRaiz.Amigos.Primero;
-        //        bool tieneSugerencias = false;
-
-        //        while (amigo != null)
-        //        {
-        //            Amigos amigoDeAmigo = amigo.Amigo.Amigos.Primero;
-        //            while (amigoDeAmigo != null)
-        //            {
-        //                if (!usuarioRaiz.Amigos.ExisteAmigo(amigoDeAmigo.Amigo) &&
-        //                    amigoDeAmigo.Amigo != usuarioRaiz)
-        //                {
-        //                    Console.WriteLine($"- {amigoDeAmigo.Amigo.Nombre} (amigo de {amigo.Amigo.Nombre})");
-        //                    tieneSugerencias = true;
-        //                }
-        //                amigoDeAmigo = amigoDeAmigo.siguiente;
-        //            }
-        //            amigo = amigo.siguiente;
-        //        }
-
-        //        if (!tieneSugerencias) Console.WriteLine("No hay sugerencias disponibles.");
-        //    }
-
-
-        //}
     }
 }

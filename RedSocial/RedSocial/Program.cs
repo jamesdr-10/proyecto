@@ -6,9 +6,7 @@ class Program
     public static void Menu()
     {
 
-        Console.WriteLine("=====================================");
-        Console.WriteLine("            USUARIO ACTUAL          ");
-        Console.WriteLine("=====================================\n");
+        Console.WriteLine("USUARIO ACTUAL\n");
 
         redDeUsuarios.PersonaActual();
 
@@ -16,13 +14,13 @@ class Program
         Console.WriteLine("            MENÚ PRINCIPAL          ");
         Console.WriteLine("=====================================");
 
-        Console.WriteLine("\n[1] Agregar una persona nueva a la lista");
-        Console.WriteLine("[2] Agregar un amigo a la persona actual");
-        Console.WriteLine("[3] Ver las solicitudes de amistad aceptadas de la persona actual");
-        Console.WriteLine("[4] Ver los amigos de la persona actual que también tienen a este como amigo (amistad mutua)");
-        Console.WriteLine("[5] Ver las personas que tienen a la persona actual como amigo, pero que no están en la lista de amigos de la persona actual");
-        Console.WriteLine("[6] Ver solicitudes de amistad enviadas a la persona actual");
-        Console.WriteLine("[7] Ver árbol con el usuario actual como raíz y luego ver el árbol como representación de lista");
+        Console.WriteLine("\n[1] Agregar una persona nueva");
+        Console.WriteLine("[2] Agregar un amigo");
+        Console.WriteLine("[3] Ver las solicitudes de amistad aceptadas");
+        Console.WriteLine("[4] Ver las amistades mutuas");
+        Console.WriteLine("[5] Ver las amistades que no son mutuas (la persona actual no es amigo de quienes lo tienen como amigo)");
+        Console.WriteLine("[6] Ver solicitudes de amistad pendientes");
+        Console.WriteLine("[7] Ver árbol con la persona actual como raíz y luego ver el árbol como representación de lista");
         Console.WriteLine("[8] Ver listado de personas en orden ascendente");
         Console.WriteLine("[9] Ver listado de personas en orden descendente");
         Console.WriteLine("[10] Ver factor de carga del directorio teléfonico");
@@ -72,7 +70,7 @@ class Program
                     break;
                 case "7":
                     Console.Clear();
-                    //redDeUsuarios.ArmarArbol();
+                    redDeUsuarios.ArmarArbol();
                     break;
                 case "8":
                     Console.Clear();
