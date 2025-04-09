@@ -19,7 +19,7 @@ namespace RedSocialAmigos.EstructuraDeDatos.TablasHash
             tabla = new NodoHash[tamaño];
             numElementos = 0;
         }
-        private long TransformarCadena(string clave)
+        public long TransformarCadena(string clave)
         {
             long d = 0;
             for (int j = 0; j < clave.Length; j++)
@@ -35,7 +35,7 @@ namespace RedSocialAmigos.EstructuraDeDatos.TablasHash
             return d;
         }
 
-        private int ObtenerIndice(string clave)
+        public int ObtenerIndice(string clave)
         {
             long valorTransformado = TransformarCadena(clave);
             return (int)(valorTransformado % tamañoTabla);

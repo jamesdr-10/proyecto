@@ -8,20 +8,33 @@ namespace RedSocialAmigos.EstructuraDeDatos.TablasHash
 {
     class TablaHashEmail
     {
-        private const int TAMANO = 100;
+        private int tamaño = 100;
         private NodoHashEmail[] tabla;
 
         public TablaHashEmail()
         {
-            tabla = new NodoHashEmail[TAMANO];
+            tabla = new NodoHashEmail[tamaño];
+        }
+        public long TransformarCadena(string clave)
+        {
+            long d = 0;
+            for (int j = 0; j < clave.Length; j++)
+            {
+                d = d * 27 + clave[j];
+            }
+
+            if (d < 0)
+            {
+                d = -d;
+            }
+
+            return d;
         }
 
-        private int ObtenerIndice(string clave)
+        public int ObtenerIndice(string clave)
         {
-            int hash = 0;
-            foreach (char c in clave)
-                hash = (hash * 31 + c) % TAMANO;
-            return hash;
+            long valorTransformado = TransformarCadena(clave);
+            return (int)(valorTransformado % tamaño);
         }
 
         public bool Insertar(string email)
@@ -31,7 +44,9 @@ namespace RedSocialAmigos.EstructuraDeDatos.TablasHash
             while (actual != null)
             {
                 if (actual.Email == email)
+                {
                     return false;
+                }
                 actual = actual.Siguiente;
             }
             NodoHashEmail nuevo = new NodoHashEmail(email);
@@ -47,7 +62,9 @@ namespace RedSocialAmigos.EstructuraDeDatos.TablasHash
             while (actual != null)
             {
                 if (actual.Email == email)
+                {
                     return true;
+                }
                 actual = actual.Siguiente;
             }
             return false;

@@ -23,87 +23,76 @@ namespace RedSocialAmigos.Main
 
         public RedDeUsuarios()
         {
-            tablaDirectorio = new TablaHash(10);
+            tablaDirectorio = new TablaHash(100);
         }
 
         public void AgregarUsuario()
         {
             Console.Write("Digite el nombre de la persona: ");
-            string nombre = Console.ReadLine().Trim();
-            while (string.IsNullOrWhiteSpace(nombre) || !nombre.Replace(" ", "").All(char.IsLetter))
-            {
-                Console.WriteLine("Error: El nombre solo puede contener letras y no puede estar vacío.");
-                Console.Write("Digite el nombre de la persona: ");
-                nombre = Console.ReadLine().Trim();
-            }
-            nombre = string.Join(" ", nombre.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
+            string nombre = Console.ReadLine();
 
             Console.Write("Digite el apellido del usuario: ");
-            string apellido = Console.ReadLine().Trim();
-            while (string.IsNullOrWhiteSpace(apellido) || !apellido.Replace(" ", "").All(char.IsLetter))
-            {
-                Console.WriteLine("Error: El apellido solo puede contener letras y no puede estar vacío.");
-                Console.Write("Digite el apellido del usuario: ");
-                apellido = Console.ReadLine().Trim();
-            }
-            apellido = string.Join(" ", apellido.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries));
+            string apellido = Console.ReadLine();
 
             int edad;
-            do
+            while (true)
             {
                 Console.Write("Digite la edad de la persona: ");
-                if (int.TryParse(Console.ReadLine(), out edad) && edad > 0)
+                if (int.TryParse(Console.ReadLine(), out edad))
+                {
+                    if (edad > 0)
+                        break;
+                    else
+                        Console.WriteLine("Error: La edad debe ser mayor que 0. Intente nuevamente.");
+                }
+                else
+                {
+                    Console.WriteLine("Error: Debe ingresar un número válido para la edad. Intente nuevamente.");
+                }
+            }
+
+            string telefono;
+            while (true)
+            {
+                Console.Write("Digite el teléfono de la persona: ");
+                telefono = Console.ReadLine();
+
+                if (telefono.All(char.IsDigit))
                 {
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Entrada inválida. Por favor ingresa una edad válida mayor que 0.");
+                    Console.WriteLine("Error: El teléfono debe contener únicamente números. Intente nuevamente.");
                 }
-            } while (true);
-
-            Console.Write("Digite el teléfono de la persona: ");
-            string telefono = Console.ReadLine().Trim();
-            while (string.IsNullOrWhiteSpace(telefono) || !telefono.All(char.IsDigit))
-            {
-                Console.WriteLine("Error: El teléfono solo puede contener números y no puede estar vacío.");
-                Console.Write("Digite el teléfono de la persona: ");
-                telefono = Console.ReadLine().Trim();
             }
 
-            while (tablaDirectorio.Buscar(telefono) != null)
+            if (tablaDirectorio.Buscar(telefono) != null)
             {
                 Console.WriteLine("Error: Ya existe una persona con este número de teléfono.");
-                Console.Write("Por favor, ingrese un teléfono diferente: ");
-                telefono = Console.ReadLine().Trim();
-                while (string.IsNullOrWhiteSpace(telefono) || !telefono.All(char.IsDigit))
+                return;
+            }
+
+            string email;
+            while (true)
+            {
+                Console.Write("Digite el email de la persona: ");
+                email = Console.ReadLine();
+
+                if (email.Contains(" "))
                 {
-                    Console.WriteLine("Error: El teléfono solo puede contener números y no puede estar vacío.");
-                    Console.Write("Digite el teléfono de la persona: ");
-                    telefono = Console.ReadLine().Trim();
+                    Console.WriteLine("Error: El email no puede contener espacios. Intente nuevamente.");
+                }
+                else
+                {
+                    break;
                 }
             }
 
-            Console.Write("Digite el email de la persona: ");
-            string email = Console.ReadLine().Trim();
-            while (string.IsNullOrWhiteSpace(email) || !email.Contains("@") || email.Contains(" "))
-            {
-                Console.WriteLine("Error: Ingrese un email válido sin espacios.");
-                Console.Write("Digite el email de la persona: ");
-                email = Console.ReadLine().Trim();
-            }
-
-            while (BuscarPorEmail(email) != null)
+            if (BuscarPorEmail(email) != null)
             {
                 Console.WriteLine("Error: Ya existe una persona con este email.");
-                Console.Write("Por favor, ingrese un email diferente: ");
-                email = Console.ReadLine().Trim();
-                while (string.IsNullOrWhiteSpace(email) || !email.Contains("@") || email.Contains(" "))
-                {
-                    Console.WriteLine("Error: Ingrese un email válido sin espacios.");
-                    Console.Write("Digite el email de la persona: ");
-                    email = Console.ReadLine().Trim();
-                }
+                return;
             }
 
             Persona nuevaPersona = new Persona(nombre, apellido, edad, telefono, email);
@@ -408,9 +397,12 @@ namespace RedSocialAmigos.Main
 
         }
 
-        private string ObtenerRepresentacionLista(NodoArbol nodo)
+        public string ObtenerRepresentacionLista(NodoArbol nodo)
         {
-            if (nodo == null) return "";
+            if (nodo == null)
+            {
+                return "";
+            }
 
             string resultado = $"{nodo.Persona.Nombre} {nodo.Persona.Apellido}";
 
@@ -469,9 +461,8 @@ namespace RedSocialAmigos.Main
         public void MostrarFactorCarga()
         {
             double factorCarga = tablaDirectorio.ObtenerFactorCarga();
-            Console.WriteLine($"El factor de carga del directorio telefónico es: {factorCarga}");
+            Console.WriteLine($"El factor de carga del directorio telefónico es: {factorCarga} ({factorCarga * 100}%)");
         }
-
 
         public void ImprimirAscendente()
         {
